@@ -15,26 +15,91 @@ Over the past five months, I have been very obsessed with the game, 'Teamfight T
 
 That's just some of the basic ideas of the game. There is a lot more to the game once you understand the basics, ranging from playstyles, game flow, composition structures and so on. A combination of all these ideas make the game extremely fun to play. 
 
+<img src="images/5_moonlight.png"
+     alt="Finally Hit Grandmaster!"
+     style="float: left; margin-right: 5px;" 
+     width="200px;" />
 
 
 ## EDA
-In the whole dataset collected, there are a total of 555 different games of TFT played over the course of about four months (from mid September to present). TFT is a game which regularly has balance patches to ensure that the 'best units', 'best compositions', and 'best items' don't stay constant, and will keep the compeitive side of the game more interesting. As a result, I have decided to limit my analysis to a single patch - 10.25 (spanning essentially the whole of December until January 5 2021). This patch was chosen because it was the longest span of time without balance patches (the balance team was on holidays). This also meant that I personally played a lot of games, making the findings more interesting. In addition, since the most recent balance patch (as of writing this blogpost) has not changed the meta too drastically, it may also help me with my climb to Grandmaster. 
+In the whole dataset collected, there are a total of 555 different games of TFT played over the course of about four months (from mid September to present). TFT is a game which regularly has balance patches to ensure that the 'best units', 'best compositions', and 'best items' don't stay constant, and will keep the compeitive side of the game more interesting. As a result, I have decided to limit my analysis to a single patch - 10.25 (spanning from December 9 2020 to January 5 2021). This patch was chosen because it was the longest span of time without balance patches (the balance team was on holidays). This also meant that I personally played a lot of games, making the findings more interesting. In addition, since the most recent balance patch (as of writing this blogpost) has not changed the meta too drastically, it may also help me with my climb to Grandmaster (UPDATE: It did help). 
+
+
+### Sample data
+Here's a sample of the dataset:
+|  | __Date__ | __Patch__ | __Account__ | __Starting Item__ | __Chosen__ | __Comp__ | __Place__ | __Rank__ | __LP__ | __LP Diff__ | __Winning Comp (if saw)__ | __Comment__ | __Week__ | __chosen_trait__ | __chosen_unit__ |
+|-:|-:|-:|-:|-:|-:|-:|-:|-:|-:|-:|-:|-:|-:|-:|-:|
+| 527 | 2021-01-03 | 10.25 | phillipluong | Cloak | Duelist Yasuo | 6 Duelists | 5 | M1 | 366 | -10.0 | NaN | no yone :(; I probably should've rolled for yo... | 4 | Duelist | Yasuo |
+| 528 | 2021-01-03 | 10.25 | phillipluong | Bow | Assassin Akali | Ninja Shade | 8 | M1 | 356 | -42.0 | NaN | that game felt so doomed; that kench did nothi... | 4 | Assassin | Akali |
+| 529 | 2021-01-03 | 10.25 | phillipluong | Tear | Mystic Cassie | 4 Dusk 4 Sharpshooters | 7 | M1 | 314 | -27.0 | NaN | sold my fortune before I cashed out…............, | 4 | Mystic | Cassie |
+| 530 | 2021-01-03 | 10.25 | phillipluong | Rod | Warlord Garen | 9 Warlords | 4 | M1 | 287 | 10.0 | NaN | NaN | 4 | Warlord | Garen |
+| 531 | 2021-01-03 | 10.25 | phillipluong | Sword | none | Divine Hunters | 7 | M1 | 297 | -38.0 | NaN | should've gotten dazzler morgana; the items we... | 4 | none | none |
+
+
+### Column Descriptions
+There are a total of 15 columns in the data, comprising of the former 12 that were filled out as I played each game, and the latter 3 created for the analysis. I will now explain the details of these columns:
+
+| Col Name | Column Description | Data Type |
+|:-|-|:-|
+| Date | The date that the game was played | datetime64[ns] |
+| Patch | The Balance Patch the game was played on | object |
+| Account | Since I played 2 active accounts, I keep track of which of the two accounts I played on | object |
+| Starting Item | What item did I start the game with | object |
+| Chosen | The chosen unit I had by the end of the game | object |
+| Comp | A brief description of the composition I ran | object |
+| Place | My placement at the end of the game (ranging from 1st to 8th) | object |
+| Rank | The Rank I was at during the game (Ranging from Iron 4 (I4) to Grandmaster (GM1) | object |
+| LP | The amount of 'League Points' I was at before the game. This determines my overall rank | int64 |
+| LP Diff | The change in my LP after I finished the game | float64 |
+| Winning Comp (if saw) | I would sometimes write the winning composition if I followed the game until the end | object |
+| Comment | A comment on the game (if I had one) | object |
+| Week | Which week of the patch this game was played (week 1-4). This only applied for patch 10.25 since the patch ran for 4 weeks | int64 |
+| chosen_trait | A specific breakdown of the trait (origin/class) of the chosen unit | object |
+| chosen_unit | A specific breakdown of the chosen unit itself | object |
 
 
 ### Primary Statistics
+Over the span of 4 weeks, a total of 134 games were played. All of these games were played on accounts that were of 'Masters' Rank or above (the top 0.36% of the playerbase). Through this time, my primary account, _phillipluong_, dropped from 430 League Points (LP) to 259 LP (mostly on the last day). Meanwhile, my secondary account, had increased from 144 LP to 404 LP. This means there was a total increase of 89 LP over the four week period (equivalent to two 1st place finishes). Over the 134 games, there were a fairly even amount of placements over the period.
 
+<img src="images/main_placements.png"
+     alt="Placements Over time"
+     style="float: left; margin-right: 5px;" 
+     width="300px;" />
 
+Notably, there are far fewer 1st and 8th placements compared to all other rankings. I had a 8.96% win rate (12/134), which is much lower than the expected 12.5% winrate. Conversely, my loss rate was also 8,96%, which shows that I did quite well to prevent the maximal LP loss each game. Also of note, you always gain at least 10 LP for coming in the top 4. Over the four weeks, I had a 69/134 top 4 placement rate (51.49%), which is better than the expected rate. 
+
+- Wins were mostly collected from playing: Dusk, Hunter Adept, Ninja Shade, and Legendary Comps. There was also 1 win from 9 elderwood. 
+- Top 4 Comps also included: 9 Mages, Divine Hunters, Enlightened, Moonlight Reroll 
 
 ### Analysis based on week
-
+- Games played per week: 43,23,40,28 [bar plot?]
+- Win rate: 6/43 (13.95%), 1/23 (4.35%), 4/40 (10%), 1/28 (3.57%)
+- Top rate: 25/43 (58.14%), 12/23 (52.17%), 23/40 (57.5%), 9/28 (32.14%)
+- Average placements per week: 4.16, 4.65, 4.07, 5.32
+- median placements per week: 4, 4, 4, 5.5
+- Average LP diff per week: 202, -40, 239, -312
+- Have a Subplot distribution per week
 
 
 ### Analysis based on Account
+- phillipluong: 79, ILoveAnt: 55
+- Average placements: 4.67, 4.16
+- Median Placement: 5, 4
+- Placement plot for each account 
 
+### Analysis based on Account, by week
+- ILoveAnt:
+   - count: 21, 15, 15, 4 
+   - Avg: 3,76, 4.33, 4.07, 6.00
+   - med: 3, 4, 4, 6
+- phillipluong:
+   - count: 25, 24, 22, 8
+   - Avg: 4.55, 5.25, 4.08, 5.21
+   - med: 4.5, 5.5, 4, 5.5
 
 
 ### Analysis based on starting item
-
+- There is basis that the starting item normally dictates the flow of the game, and hence, may be a good determinant of the overall placement
 
 
 ### Analysis based on final chosen unit/trait
@@ -48,6 +113,15 @@ There are a handful of things that can be done to progress this EDA in the futur
 When it comes to data collection, there could be some way to use the Riot Games API to collect a list of all the teams I have used (and maybe the teams my opponents used) in each game. That way, I can then determine which units I perform well with and against (and vice versa). A couple of analytic tools already accomplish such a feat already, such as tactics.tools, which allow me to analyse my performance on the last 20, 50, and 100 games. 
 
 In addition, I wish to potentially replicate this EDA using SQL in order to develop my SQL toolbox. Hopefully, by learning SQL, I will also figure out new findings I can get from the same dataset.
+
+Game-wise, I have very much been enjoying the changes in the 'meta' of the game, and hope to continue climbing the ladder. Recently, I have managed to finally reach one of my bigger goals for playing the game, which was to hit the 'Grandmaster' title (meaning that I am in the top 150 players in the Oceania server). 
+
+<img src="images/gm_210116.png"
+     alt="Finally Hit Grandmaster!"
+     style="float: left; margin-right: 5px;" 
+     width="200px;" />
+
+Very soon, there will be a huge balance patch, which changes out 20 characters for new ones, completely changing the flow of the game. Along with these changes, my short-term goal is to hit the top 100 in the Oceania Server, then maybe hit top 50 (giving me the Challenger title).  
 
 ## Other Resources
 
