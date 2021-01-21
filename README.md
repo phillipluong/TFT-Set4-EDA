@@ -58,7 +58,7 @@ There are a total of 15 columns in the data, comprising of the former 12 that we
 | chosen_unit | A specific breakdown of the chosen unit itself | object |
 
 
-### Primary Statistics
+## Primary Statistics
 Over the span of 4 weeks, a total of 134 games were played. All of these games were played on accounts that were of 'Masters' Rank or above (the top 0.36% of the playerbase). Through this time, my primary account, _phillipluong_, dropped from 430 League Points (LP) to 259 LP (mostly on the last day). Meanwhile, my secondary account, had increased from 144 LP to 404 LP. This means there was a total increase of 89 LP over the four week period (equivalent to two 1st place finishes). Over the 134 games, there were a fairly even amount of placements over the period.
 
 <img src="images/main_placements.png"
@@ -71,7 +71,12 @@ Notably, there are far fewer 1st and 8th placements compared to all other rankin
 - Wins were mostly collected from playing: Dusk, Hunter Adept, Ninja Shade, and Legendary Comps. There was also 1 win from 9 elderwood. 
 - Top 4 Comps also included: 9 Mages, Divine Hunters, Enlightened, Moonlight Reroll 
 
-### Analysis based on week
+## Analysis based on weeks and Accounts
+
+### Analysis each week
+
+My gameplay wasn't always the same each week (hopefully, it's all in part of a steady improvement). Regardless, there were definitely some weeks where I performed better than others, as shown by these summary statistics:
+
 - Games played per week: 43,23,40,28 [bar plot?]
 - Win rate: 6/43 (13.95%), 1/23 (4.35%), 4/40 (10%), 1/28 (3.57%)
 - Top rate: 25/43 (58.14%), 12/23 (52.17%), 23/40 (57.5%), 9/28 (32.14%)
@@ -80,12 +85,18 @@ Notably, there are far fewer 1st and 8th placements compared to all other rankin
 - Average LP diff per week: 202, -40, 239, -312
 - Have a Subplot distribution per week
 
+On average, I played 33.5 games per week. Notably, I played more games and had a higher win rate on weeks 1 and 3, rather than weeks 2 and 4. In addition, I only had a higher than expected win rate in Week 1, at 13,95% (instead of the expected 12.5%). 
+
+[Have a comment on the placement distributions per week?]
+
 
 ### Analysis based on Account
 - phillipluong: 79, ILoveAnt: 55
 - Average placements: 4.67, 4.16
 - Median Placement: 5, 4
 - Placement plot for each account 
+
+Overall, it appeared that my gameplay was better on the 'ILoveAnt' account rather than my primary account, 'phillipluong'. I believe that the clear reason may likely be because 'ILoveAnt' started off playing games against lower ranked users, thus increasing its odds of winning or appearing in the Top 4.
 
 ### Analysis based on Account, by week
 - ILoveAnt:
