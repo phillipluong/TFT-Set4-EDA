@@ -64,12 +64,19 @@ Over the span of 4 weeks, a total of 134 games were played. All of these games w
 <img src="images/main_placements.png"
      alt="Placements Over time"
      style="float: left; margin-right: 5px;" 
-     width="300px;" />
+     width="500px;" />
 
 Notably, there are far fewer 1st and 8th placements compared to all other rankings. I had a 8.96% win rate (12/134), which is much lower than the expected 12.5% winrate. Conversely, my loss rate was also 8,96%, which shows that I did quite well to prevent the maximal LP loss each game. Also of note, you always gain at least 10 LP for coming in the top 4. Over the four weeks, I had a 69/134 top 4 placement rate (51.49%), which is better than the expected rate. 
 
 - Wins were mostly collected from playing: Dusk, Hunter Adept, Ninja Shade, and Legendary Comps. There was also 1 win from 9 elderwood. 
 - Top 4 Comps also included: 9 Mages, Divine Hunters, Enlightened, Moonlight Reroll 
+
+Here's a word cloud of my personal summary of the compositions I played. Since I consider myself a 'semi-flexible' player, the descriptions of my compositions will differ depending on the kind of units that appear in my shop. 
+
+<img src="images/compositions_word_cloud.png"
+     alt="Composition Word Cloud"
+     style="float: left; margin-right: 5px;" 
+     width="500px;" />
 
 ## Analysis based on weeks and Accounts
 
@@ -87,10 +94,10 @@ My gameplay wasn't always the same each week (hopefully, it's all in part of a s
 
 On average, I played 33.5 games per week. Notably, I played more games and had a higher win rate on weeks 1 and 3, rather than weeks 2 and 4. In addition, I only had a higher than expected win rate in Week 1, at 13,95% (instead of the expected 12.5%). 
 
-[Have a comment on the placement distributions per week?]
-
-
 ### Analysis based on Account
+
+[Line Graph of LP Progression of both accounts?]
+
 - phillipluong: 79, ILoveAnt: 55
 - Average placements: 4.67, 4.16
 - Median Placement: 5, 4
@@ -98,19 +105,36 @@ On average, I played 33.5 games per week. Notably, I played more games and had a
 
 Overall, it appeared that my gameplay was better on the 'ILoveAnt' account rather than my primary account, 'phillipluong'. I believe that the clear reason may likely be because 'ILoveAnt' started off playing games against lower ranked users, thus increasing its odds of winning or appearing in the Top 4.
 
+If I removed the games 'ILoveAnt' played after hitting 300 LP, here are the results:
+
+[Results of ILoveAnt after 300LP]
+
+In addition, there was indeed a day where I played in the account 'phillipluong' and ran it all the way down, after I was about 1 game off hitting Grandmaster. Here are the details of my account if we remove that period:
+
+[Results of phillipluong before running it down]
+
 ### Analysis based on Account, by week
 - ILoveAnt:
    - count: 21, 15, 15, 4 
    - Avg: 3,76, 4.33, 4.07, 6.00
+   - LP Change: 221, 40, 87, -88
    - med: 3, 4, 4, 6
 - phillipluong:
    - count: 25, 24, 22, 8
    - Avg: 4.55, 5.25, 4.08, 5.21
+   - LP Change: -19, -80, 152, -224
    - med: 4.5, 5.5, 4, 5.5
 
 
+I was also curious on my performance of each account, per week. I wouldn't say that there were any drastic changes per account, per week. From what it looks like, the final week was probably that only 'drastic' difference. The account, 'ILoveAnt' had some steady progression throughout each week, besides week 4. Conversely, philipluong only really made a lot of success in Week 3 and lost LP every other week. 
+
+
 ### Analysis based on starting item
-- There is basis that the starting item normally dictates the flow of the game, and hence, may be a good determinant of the overall placement
+- There is basis that the starting item normally dictates the flow of the game, and hence, may be a good determinant of the overall placement. I would tend to agree with this idea, especially after looking at my own data. 
+
+Traditionally, the more 'popular' items to collect in this patch appeared to be: Tears and Swords, tben Rods, Gloves, Bows and finally Cloaks, Vests and Belts. These patterns are often associated with the strongest kinds of compositions often being played at the time. In this patch, the data was leaning towards compotiions that played around Jhin, Ashe, Veigar, Riven, and sometimes, Zed. Many of these units would prefer Sword-based items (Jhin, Ashe), whilst some users prefered magic damage items (like Riven and Veigar). Compositions based around Zed were reliant on a lot of bows. 
+
+
 
 
 ### Analysis based on final chosen unit/trait
@@ -145,3 +169,38 @@ A huge thanks to a bunch of external tools that I regularly use to help my climb
 - the competitive tft reddit site
 
 Many of these tools have include a lot of analyses that I wish to incorporate myself, including analysing which units to use, combinations of units statistically work well together and which items that work better with units. I have a bunch of snapshots below from some of these websites that include information that I find extremely helpful and useful. 
+
+<img src="images/lolchess_item_trends.png"
+     alt="lolchess item trends"
+     style="float: left; margin-right: 5px;" 
+     width="500px;" />
+
+<img src="images/lolchess_match_history.png"
+     alt="lolchess match history"
+     style="float: left; margin-right: 5px;" 
+     width="500px;" />
+
+<img src="images/unit_selection_lolchess.png"
+     alt="lolchess match history"
+     style="float: left; margin-right: 5px;" 
+     width="500px;" />
+
+<img src="images/tactics_tools_iloveant_profile.png"
+     alt="tacticstools profile"
+     style="float: left; margin-right: 5px;" 
+     width="500px;" />
+
+<img src="images/tactics_tools_progression_100.png"
+     alt="tactics tools progression"
+     style="float: left; margin-right: 5px;" 
+     width="500px;" />
+
+<img src="images/metatft_bestcomps.png"
+     alt="lolchess match history"
+     style="float: left; margin-right: 5px;" 
+     width="500px;" />
+
+<img src="images/metatft_comp_details.png"
+     alt="lolchess match history"
+     style="float: left; margin-right: 5px;" 
+     width="500px;" />
