@@ -18,7 +18,7 @@ That's just some of the basic ideas of the game. There is a lot more to the game
 <img src="images/5_moonlight.png"
      alt="Finally Hit Grandmaster!"
      style="float: left; margin-right: 5px;" 
-     width="200px;" />
+     width="500px;" />
 
 
 ## EDA
@@ -191,7 +191,7 @@ Traditionally, the more 'popular' items to collect in this patch appeared to be:
      style="float: left; margin-right: 5px;" 
      width="500px;" />
 
-<img src="images/worldcloud_wins.png"
+<img src="images/wordcloud_wins.png"
      alt="Word Cloud of Frequency of Winning Compositions"
      style="float: left; margin-right: 5px;" 
      width="500px;" />
