@@ -84,13 +84,12 @@ Here's a word cloud of my personal summary of the compositions I played. Since I
 
 My gameplay wasn't always the same each week (hopefully, it's all in part of a steady improvement). Regardless, there were definitely some weeks where I performed better than others, as shown by these summary statistics:
 
-- Games played per week: 43,23,40,28 [bar plot?]
-- Win rate: 6/43 (13.95%), 1/23 (4.35%), 4/40 (10%), 1/28 (3.57%)
-- Top rate: 25/43 (58.14%), 12/23 (52.17%), 23/40 (57.5%), 9/28 (32.14%)
-- Average placements per week: 4.16, 4.65, 4.07, 5.32
-- median placements per week: 4, 4, 4, 5.5
-- Average LP diff per week: 202, -40, 239, -312
-- Have a Subplot distribution per week
+| Week No. | Games Played | Wins (%) | Top rate (%) | mean placements (SD) | median placements (IQR) | LP Diff |
+|-|-|-|-|-|-|-|
+| Week 1 | 43 | 6 (13.95%) | 25 (58.14%) | 4.16 (2.13) | 4 (3-6) | +202 |
+| Week 2 | 23 | 1 (4.35%) | 12 (52.17%) | 4.65 (2.10) | 4 (3-6) | -40 |
+| Week 3 | 40 | 4 (10%) | 23 (57.5%) | 4.08 (2.09) | 4 (2-6) | +239 |
+| Week 4 | 28 | 1 (3.57%) | 9 (32.14%) | 5.32 (2.18) | 5.5 (4-7) | -312 |
 
 On average, I played 33.5 games per week. Notably, I played more games and had a higher win rate on weeks 1 and 3, rather than weeks 2 and 4. In addition, I only had a higher than expected win rate in Week 1, at 13,95% (instead of the expected 12.5%). 
 
@@ -123,16 +122,23 @@ In addition, there was indeed a day where I played in the account 'phillipluong'
      width="500px;" />
 
 ### Analysis based on Account, by week
-- ILoveAnt:
-   - count: 21, 15, 15, 4 
-   - Avg: 3,76, 4.33, 4.07, 6.00
-   - LP Change: 221, 40, 87, -88
-   - med: 3, 4, 4, 6
-- phillipluong:
-   - count: 25, 24, 22, 8
-   - Avg: 4.55, 5.25, 4.08, 5.21
-   - LP Change: -19, -80, 152, -224
-   - med: 4.5, 5.5, 4, 5.5
+__ILoveAnt:__
+
+| Week No. | Games Played | Wins (%) | Top rate (%) | mean placements (SD) | median placements (IQR) | LP Diff |
+|-|-|-|-|-|-|-|
+| Week 1 | 21 | 5 (23.81%) | 14 (66.67%) | 3.76 (2.32) | 3 (2-6) | +221 |
+| Week 2 | 15 | 1 (6.67%) | 10 (66.67%) | 4.33 (2.41) | 3 (3-6) | +40 |
+| Week 3 | 15 | 2 (13.33%) | 9 (60%) | 4.06 (2.15) | 4 (2.5-6) | +87 |
+| Week 4 | 4 | 1 (25%) | 1 (25%) | 6.00 (1.82) | 6 (4.75 - 7.25) | -88 |
+
+__phillipluong:__
+
+| Week No. | Games Played | Wins (%) | Top rate (%) | mean placements (SD) | median placements (IQR) | LP Diff |
+|-|-|-|-|-|-|-|
+| Week 1 | 22 | 1 (4.54%) | 11 (50%) | 4.55 (1.89) | 4.5 (3-6) | -19 |
+| Week 2 | 8 | 0 (0%) | 2 (25%) | 5.25 (1.28) | 5.5 (4.75-6) | -80 |
+| Week 3 | 25 | 2 (8%) | 14 (56%) | 4.08 (2.10) | 4 (2-6) | +152 |
+| Week 4 | 24 | 1 (4.17%) | 8 (33.33%) | 5.20 (2.25) | 5.5 (3.75 - 7) | -224 |
 
 
 I was also curious on my performance of each account, per week. I wouldn't say that there were any drastic changes per account, per week. From what it looks like, the final week was probably that only 'drastic' difference. The account, 'ILoveAnt' had some steady progression throughout each week, besides week 4. Conversely, philipluong only really made a lot of success in Week 3 and lost LP every other week. 
