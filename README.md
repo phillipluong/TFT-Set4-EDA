@@ -96,7 +96,10 @@ On average, I played 33.5 games per week. Notably, I played more games and had a
 
 ### Analysis based on Account
 
-[Line Graph of LP Progression of both accounts?]
+<img src="images/comparison_of_LP_by_accounts.png"
+     alt="ILoveAnt after 300LP"
+     style="float: left; margin-right: 5px;" 
+     width="500px;" />
 
 - phillipluong: 79, ILoveAnt: 55
 - Average placements: 4.67, 4.16
@@ -107,11 +110,17 @@ Overall, it appeared that my gameplay was better on the 'ILoveAnt' account rathe
 
 If I removed the games 'ILoveAnt' played after hitting 300 LP, here are the results:
 
-[Results of ILoveAnt after 300LP]
+<img src="images/ILoveAnt_after_300LP.png"
+     alt="ILoveAnt after 300LP"
+     style="float: left; margin-right: 5px;" 
+     width="500px;" />
 
 In addition, there was indeed a day where I played in the account 'phillipluong' and ran it all the way down, after I was about 1 game off hitting Grandmaster. Here are the details of my account if we remove that period:
 
-[Results of phillipluong before running it down]
+<img src="images/phillipluong_before_boom.png"
+     alt="phillipluong before I lost all the LP"
+     style="float: left; margin-right: 5px;" 
+     width="500px;" />
 
 ### Analysis based on Account, by week
 - ILoveAnt:
@@ -134,12 +143,63 @@ I was also curious on my performance of each account, per week. I wouldn't say t
 
 Traditionally, the more 'popular' items to collect in this patch appeared to be: Tears and Swords, tben Rods, Gloves, Bows and finally Cloaks, Vests and Belts. These patterns are often associated with the strongest kinds of compositions often being played at the time. In this patch, the data was leaning towards compotiions that played around Jhin, Ashe, Veigar, Riven, and sometimes, Zed. Many of these units would prefer Sword-based items (Jhin, Ashe), whilst some users prefered magic damage items (like Riven and Veigar). Compositions based around Zed were reliant on a lot of bows. 
 
+<img src="images/freq_ave_placement_items.png"
+     alt="Frequency and Average placement based on starting item"
+     style="float: left; margin-right: 5px;" 
+     width="500px;" />
+
+[Analyse this part]
+
+<img src="images/top4_win_rate_items.png"
+     alt="Top 4 and win rate based on starting item"
+     style="float: left; margin-right: 5px;" 
+     width="500px;" />
+
+[Analyse this part]
 
 
+## Analysis based on the _Chosen_ mechanic
 
-### Analysis based on final chosen unit/trait
+### Analysis based on the _Chosen_ trait
 
+<img src="images/freq_chosen_traits.png"
+     alt="Frequency of Chosen Trait"
+     style="float: left; margin-right: 5px;" 
+     width="500px;" />
 
+<img src="images/chosen_trait_analysis.png"
+     alt="Detailed Chosen Trait Analysis"
+     style="float: left; margin-right: 5px;" 
+     width="500px;" />
+
+### Analysis based on key _Chosen_ units
+
+<img src="images/individual_units_win_rate.png"
+     alt="Table of Individual Unit Chosen Stats"
+     style="float: left; margin-right: 5px;" 
+     width="500px;" />
+
+<img src="images/legendaries_win_rate.png"
+     alt="Table of Legendaries Chosen Stats"
+     style="float: left; margin-right: 5px;" 
+     width="500px;" />
+
+### Analysis of winning and top 4 comps
+
+<img src="images/frequent_top4.png"
+     alt="Word Cloud of Frequency of Top 4 Compositions"
+     style="float: left; margin-right: 5px;" 
+     width="500px;" />
+
+<img src="images/worldcloud_wins.png"
+     alt="Word Cloud of Frequency of Winning Compositions"
+     style="float: left; margin-right: 5px;" 
+     width="500px;" />
+
+<img src="images/winning_comps.png"
+     alt="Word Cloud of winning comps"
+     style="float: left; margin-right: 5px;" 
+     width="500px;" />
 
 ## Future Directions
 
