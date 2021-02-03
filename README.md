@@ -20,6 +20,7 @@ That's just some of the basic ideas of the game. There is a lot more to the game
      style="float: left; margin-right: 5px;" 
      width="500px;" />
 
+__Figure 1: An example of a team in TFT (Moonlight Hunters)__
 
 ## EDA
 In the whole dataset collected, there are a total of 555 different games of TFT played over the course of about four months (from mid September to present). TFT is a game which regularly has balance patches to ensure that the 'best units', 'best compositions', and 'best items' don't stay constant, and will keep the compeitive side of the game more interesting. As a result, I have decided to limit my analysis to a single patch - 10.25 (spanning from December 9 2020 to January 5 2021). This patch was chosen because it was the longest span of time without balance patches (the balance team was on holidays). This also meant that I personally played a lot of games, making the findings more interesting. In addition, since the most recent balance patch (as of writing this blogpost) has not changed the meta too drastically, it may also help me with my climb to Grandmaster (UPDATE: It did help). 
@@ -27,6 +28,9 @@ In the whole dataset collected, there are a total of 555 different games of TFT 
 
 ### Sample data
 Here's a sample of the dataset:
+
+__Table 1: Sample of the Dataset__
+
 |  | __Date__ | __Patch__ | __Account__ | __Starting Item__ | __Chosen__ | __Comp__ | __Place__ | __Rank__ | __LP__ | __LP Diff__ | __Winning Comp (if saw)__ | __Comment__ | __Week__ | __chosen_trait__ | __chosen_unit__ |
 |-:|-:|-:|-:|-:|-:|-:|-:|-:|-:|-:|-:|-:|-:|-:|-:|
 | 527 | 2021-01-03 | 10.25 | phillipluong | Cloak | Duelist Yasuo | 6 Duelists | 5 | M1 | 366 | -10.0 | NaN | no yone :(; I probably should've rolled for yo... | 4 | Duelist | Yasuo |
@@ -38,6 +42,8 @@ Here's a sample of the dataset:
 
 ### Column Descriptions
 There are a total of 15 columns in the data, comprising of the former 12 that were filled out as I played each game, and the latter 3 created for the analysis. I will now explain the details of these columns:
+
+__Table 2: Dataset Column Descriptions__
 
 | Col Name | Column Description | Data Type |
 |:-|-|:-|
@@ -66,12 +72,16 @@ Over the span of 4 weeks, a total of 134 games were played. All of these games w
      style="float: left; margin-right: 5px;" 
      width="500px;" />
 
+__Figure 2: Overall Number of Placements in Patch 10.25__
+
 Notably, there are far fewer 1st and 8th placements compared to all other rankings. I had a 8.96% win rate (12/134), which is much lower than the expected 12.5% winrate. Conversely, my loss rate was also 8.96%, which shows that I did quite well to prevent the maximal LP loss each game. Also of note, you always gain at least 10 LP for coming in the top 4. Over the four weeks, I had a 69/134 top 4 placement rate (51.49%), which is better than the expected rate. 
 
 - Wins were mostly collected from playing: Dusk, Hunter Adept, Ninja Shade, and Legendary Comps. There was also 1 win from 9 elderwood. 
 - Top 4 Comps also included: 9 Mages, Divine Hunters, Enlightened, Moonlight Reroll 
 
 Here's a word cloud of my personal summary of the compositions I played. Since I consider myself a 'semi-flexible' player, the descriptions of my compositions will differ depending on the kind of units that appear in my shop. 
+
+__Figure 3: A word cloud of the typical compositions I played during Patch 10.25__
 
 <img src="images/compositions_word_cloud.png"
      alt="Composition Word Cloud"
@@ -83,6 +93,8 @@ Here's a word cloud of my personal summary of the compositions I played. Since I
 ### Analysis each week
 
 My gameplay wasn't always the same each week (hopefully, it's all in part of a steady improvement). Regardless, there were definitely some weeks where I performed better than others, as shown by these summary statistics:
+
+__Table 3: Performance based on different weeks__
 
 | Week No. | Games Played | Wins (%) | Top rate (%) | mean placements (SD) | median placements (IQR) | LP Diff |
 |-|-|-|-|-|-|-|
@@ -100,7 +112,11 @@ On average, I played 33.5 games per week. Notably, I played more games and had a
      style="float: left; margin-right: 5px;" 
      width="500px;" />
 
+__Figure 4: A comparison of LP change by each account__
+
 NOTE: The vertical green lines separate each of the weeks of the patch.
+
+__Table 4: Performance based on different accounts__
 
 | Account | Games Played | Wins (%) | Top rate (%) | mean placements (SD) | median placements (IQR) | LP Diff |
 |-|-|-|-|-|-|-|
@@ -116,6 +132,10 @@ There was indeed a day where I played in the account 'phillipluong' and ran it a
      style="float: left; margin-right: 5px;" 
      width="500px;" />
 
+__Figure 5: Placements on _phillipluong_ before the loss streak__
+
+__Table 5: Performance of _phillipluong_ before and during the loss streak__
+
 | Account | Games Played | Wins (%) | Top rate (%) | mean placements (SD) | median placements (IQR) | LP Diff |
 |-|-|-|-|-|-|-|
 | phillipluong (before) | 55 | 3 (5.45%) | 27 (49.09%) | 4.44 (1.93) | 5 (3-6) | +53 |
@@ -130,6 +150,10 @@ If I removed the games 'ILoveAnt' played after hitting 300 LP, here are the resu
      style="float: left; margin-right: 5px;" 
      width="500px;" />
 
+__Figure 6: Placements of _ILoveAnt_ after hitting 300LP__
+
+__Table 6: Performance of _ILoveAnt_ before and after 300LP__
+
 | Account | Games Played | Wins (%) | Top rate (%) | mean placements (SD) | median placements (IQR) | LP Diff |
 |-|-|-|-|-|-|-|
 | ILoveAnt (before) | 20 | 4 (20%) | 13 (65%) | 3.9 (2.29) | 3.5 (2-6) | +169 |
@@ -140,7 +164,7 @@ _ILoveAnt_ passed 300LP on the 15th of December. This means that the games playe
 To compare _ILoveAnt_ after hitting 300LP and _phillipluong_ before 29th of December, it appears that my performance was much better on _ILoveAnt_ regardless. This may suggest that I had a perceived mental pressure from playing in an account with my name attached to it, rather than their higher ELO. I may have wanted my name to be perceived well and had my mentality focused on getting a higher LP. I had this realisation when watching a streamer in December give myself a better idea of how to enjoy playing 'Ranked' games. This was the idea of _playing to have more opportunities to play against better opponents, and learn from those games, rather than gaining LP'_. I believe this is still helping me climb today. 
 
 ### Analysis based on Account, by week
-__ILoveAnt:__
+__Table 7: Performance of _ILoveAnt_ per week__
 
 | Week No. | Games Played | Wins (%) | Top rate (%) | mean placements (SD) | median placements (IQR) | LP Diff |
 |-|-|-|-|-|-|-|
@@ -149,7 +173,7 @@ __ILoveAnt:__
 | Week 3 | 15 | 2 (13.33%) | 9 (60%) | 4.06 (2.15) | 4 (2.5-6) | +87 |
 | Week 4 | 4 | 1 (25%) | 1 (25%) | 6.00 (1.82) | 6 (4.75 - 7.25) | -88 |
 
-__phillipluong:__
+__Table 8: Performance of _phillipluong_ per week__
 
 | Week No. | Games Played | Wins (%) | Top rate (%) | mean placements (SD) | median placements (IQR) | LP Diff |
 |-|-|-|-|-|-|-|
@@ -172,6 +196,8 @@ Traditionally, the more 'popular' items to collect in this patch appeared to be:
      style="float: left; margin-right: 5px;" 
      width="500px;" />
 
+__Figure 7: Frequency and Average placement of opening items__
+
 By far, the most selected beginning item was the tear. The tear was perceived to be the greatest item for the patch, due to certain units using items that required tear components well (namely Veigar, and Riven), but can also be used to flexibly create items that fit (Hand of Justice) for the main carries. The other frequently used items were Rods Swords, Cloaks, Bows and Vests (in that order). 
 
 
@@ -179,6 +205,10 @@ By far, the most selected beginning item was the tear. The tear was perceived to
      alt="Top 4 and win rate based on starting item"
      style="float: left; margin-right: 5px;" 
      width="500px;" />
+
+__Figure 8: Top 4 and Win Rate of opening items__
+
+__Table 9: Performance based on starting items__
 
 | Starting Item | Games Played | Wins (%) | Top rate (%) | mean placements (SD) | median placements (IQR) | LP Diff |
 |-|-|-|-|-|-|-|
@@ -210,6 +240,8 @@ The two rarer items, the _Force of Nature (FON)_ and Spatula appeared in 3 out o
      style="float: left; margin-right: 5px;" 
      width="500px;" />
 
+__Figure 9: Frequency of Chosen Traits selected in game__
+
 Not surprisingly, the most frequently selected units revolve around the compositions I enjoy playing (such as Hunter Adept, Elderwood Mages, Dusk). There are also traits that were often chosen due to their ability to win (Divine, Shade, Moonlight). In 8 of the games, I did not end the game with a chosen unit.
 
 It would be very interesting to see the correlation plots between certain chosen traits and the starting item, because I expect to see some high correlation between, say, tear and Elderwoods or mages, or bow and Shade. 
@@ -219,7 +251,11 @@ It would be very interesting to see the correlation plots between certain chosen
      style="float: left; margin-right: 5px;" 
      width="500px;" />
 
+__Figure 10: Chosen Traits selected in game details__
+
 The figure above gives a clear description of my performance. When observing the average placements of the chosen trait, the traditional traits that fit my favoured compositions do well (besides Divine and Mage). Beyond the sharpshooter trait, the traits would generally also underperform. Surprisingly, the traits that I moderately choose (have chosen \~ 6 times) result in the lowest average placement, and the greatest LP gain. These traits are: Adept, Brawler, Keeper, Shade, Duelist, and Sharpshooter. This category also nets the greatest win rates as well. I decided to include the table of this analysis below:
+
+__Table 10: Performance based on Chosen Unit Trait__
 
 | Chosen Trait | Games Played | Wins (%) | Top rate (%) | mean placements (SD) | median placements (IQR) | LP Diff |
 |-|-|-|-|-|-|-|
@@ -251,44 +287,61 @@ One chosen trait I find interesting is the _Fortune_ trait, which I perceive as 
 Notably, when I don't end with a chosen unit, I have a 0% top 4 rate, a very high average placement, and the greatest LP loss, showing the importance of selecting a chosen in my gameplay.
 
 ### Analysis based on key _Chosen_ units
-Performance based on the chosen units I played:
-<img src="images/individual_units_win_rate.png"
-     alt="Table of Individual Unit Chosen Stats"
-     style="float: left; margin-right: 5px;" 
-     width="500px;" />
 
-[analysis]
-
-### Analysis of winning and top 4 comps
-
-Top 4 Compositions (played by me):
 <img src="images/frequent_top4.png"
      alt="Word Cloud of Frequency of Top 4 Compositions"
      style="float: left; margin-right: 5px;" 
      width="500px;" />
 
+__Figure 11: Word Cloud of Chosen Units based on Top 4 Frequency__
+
 Winning compositions (played by me):
+
 <img src="images/wordcloud_wins.png"
      alt="Word Cloud of Frequency of Winning Compositions"
      style="float: left; margin-right: 5px;" 
      width="500px;" />
 
+__Figure 12: Word Cloud of Chosen Units based on Win Frequency__
+
+__Table 11: Performance based on Chosen Unit__
+
+<img src="images/individual_units_win_rate.png"
+     alt="Table of Individual Unit Chosen Stats"
+     style="float: left; margin-right: 5px;" 
+     width="500px;" />
+
+I created this table outside of the markdown format to allow a better visualisation of the unit costs (Black names are 1-cost, green names are 2-cost, blue 3, purple 4, and yellow 5). As you can see, my most commonly selected chosen units were Ashe, Warwick, and Riven. Funnily enough, selecting chosen Ashe resulted in only a net gain of 1 LP throughout the four weeks. On the other hand, chosen Riven would actually result in a net loss of 56 LP. Taking a specific look at these games, I believe one big contribution to why chosen Ashe and Riven did not give me too much success was because of my inclinations towards the Dusk and Hunter compositions, regardless of whether I was winning or losing. Looking at the net changes in LP, this might have been the incorrect decision at times anyway. Warwick was also a very commonly selected unit, due to his versatility as a supporting unit in the _Hunters_ composition, as well as his ability ot be the main damage dealer in other compositions. Although I netted no wins with chosen Warwick over the period, there was an increase of 12 LP. 
+
+The other 4-cost chosens that I normally go for are Jhin and Ahri (to a much lesser extent). Chosen Jhin would normally net me a top 4 or a win. On the flip side, I wouldn't be as successful with Ahri, knowing that compositions around Ahri realistically couldn't win games in this patch. However, this mindset may have hindered my performance when playing chosen Ahri during those games.
+
+Looking at the reroll chosen units (Yasuo, Vayne and Zed, Aphelios, Diana and Lissandra), it appears that I played quite well when playing with a chosen unit selected early in the game. Zed was my most common selected unit in this group, where I performed quite well while playing him (+45 LP, 66% top 4 rate, 16% win rate). The most notable reroll chosen was Yasuo, which I played 5 times, top 4'ed 4 of them and won one of them, giving me a mean placement of 2.8 and a +102 LP gain, the highest of all chosen units. 
+
+Three cost chosen units overall were an underperforming group (net -91 LP). I often only ended with a three cost chosen when I don't have an option to continue rolling for another chosen. 
+
+The last 3 chosen units I wanted to look at were Adept units: Irelia, Shen, and Yone. On the previous section, you may notice that I had a 100% Top 4 rate when selecting a chosen Adept unit, and I wanted to observe which compositions worked best with these units. Most of the time, the best performing compositions would revolve around Hunter Adept, or Legendaries, with a couple of games where I added in Adept just for the strong unit. Irelia did not perform as well as the other two units, which was only played in Enlightened and Warwick compositions. 
+
+### Analysis of winning and top 4 comps
+
 Winning compositions (that I saw win):
+
 <img src="images/winning_comps.png"
      alt="Word Cloud of winning comps"
      style="float: left; margin-right: 5px;" 
      width="500px;" />
 
-Most of the winning compositions played consisted of 
-- Not too much to say about the winning and top compositions other than the general theme of top units I normally use (Hunter Adept, Elderwood, Dusk etc.). I think one that stands out the most are the the 'Legendaries' composition, which comprise of a team of mostly (if not all) of the 5 cost units. This only happens when I happen to be playing really well with luck on my side. This allows me to comfortably secure myself a top 4, if not a first place.
+__Figure 13: World cloud of descriptions of winning compositions (that I saw)__
 
-Specific analysis of my performance when playing the legendaries composition:
+Not too much to say about the winning and top compositions other than the general theme of top units I normally use (Hunter Adept, Elderwood, Dusk etc.). 
+
+__Table 12: Performance with Legendary Chosens__
+
 <img src="images/legendaries_win_rate.png"
      alt="Table of Legendaries Chosen Stats"
      style="float: left; margin-right: 5px;" 
      width="500px;" />
 
-[analysis]
+I think one that stands out the most are the the 'Legendaries' composition, which comprise of a team of mostly (if not all) of the 5 cost units. This only happens when I happen to be playing really well with luck on my side. This allows me to comfortably secure myself a top 4, if not a first place.
 
 ## Future Directions
 
@@ -306,6 +359,8 @@ Game-wise, I have very much been enjoying the changes in the 'meta' of the game,
      alt="Finally Hit Grandmaster!"
      style="float: left; margin-right: 5px;" 
      width="200px;" />
+
+__Figure 14: I hit Grandmaster!!!__
 
 Very soon, there will be a huge balance patch, which changes out 20 characters for new ones, completely changing the flow of the game. Along with these changes, my short-term goal is to hit the top 100 in the Oceania Server, then maybe hit top 50 (giving me the Challenger title).  
 
@@ -326,30 +381,39 @@ Many of these tools have include a lot of analyses that I wish to incorporate my
      style="float: left; margin-right: 5px;" 
      width="500px;" />
 
+__Figure 15: lolchess.gg item trends__
+
 <img src="images/lolchess_match_history.png"
      alt="lolchess match history"
      style="float: left; margin-right: 5px;" 
      width="500px;" />
+
+__Figure 16: lolchess.gg match history__
 
 <img src="images/unit_selection_lolchess.png"
      alt="lolchess match history"
      style="float: left; margin-right: 5px;" 
      width="500px;" />
 
-[lolchess.gg](lolchess.gg)
-- lolchess.gg is probably the most popular resource for regular players in the game, as you are able to get all the information that you need for the game. They also have lists of recommended compositions to play and for you to build your own teams in theory. In addition, lolchess also collects game information to allow you to look at players' match histories (including your own). I would love to try to use the information of my own match history to analyse unit and composition performance someday.
+__Figure 17: lolchess.gg frequency of unit selection__
+
+[lolchess.gg](lolchess.gg) is probably the most popular resource for regular players in the game, as you are able to get all the information that you need for the game. They also have lists of recommended compositions to play and for you to build your own teams in theory. In addition, lolchess also collects game information to allow you to look at players' match histories (including your own). I would love to try to use the information of my own match history to analyse unit and composition performance.
 
 <img src="images/tactics_tools_iloveant_profile.png"
      alt="tacticstools profile"
      style="float: left; margin-right: 5px;" 
      width="500px;" />
 
+__Figure 18: tactics.tools general profile__
+
 <img src="images/tactics_tools_progression_100.png"
      alt="tactics tools progression"
      style="float: left; margin-right: 5px;" 
      width="500px;" />
 
-Another website, [tactic.tools](tactics.tools), provides addional information about match history, as well as an artificial 'stats bar', which comes from an inbuilt formula to calculate your performance on 'economy', 'compositions', etc. 
+__Figure 19: tactics.tools LP progression + GM/Challenger cutoff__
+
+Another website, [tactic.tools](tactics.tools), provides addional information about match history, as well as an artificial 'stats bar', which comes from an inbuilt formula to calculate your performance on economy, compositions, execution, and flexibility.  
 
 The website also has ways to analyse how well you play depending on the units you use, so you can get a good understanding of how well you perform with certain units. I would love to have these formulations in my on analyses, and have these visualisations in my analysis in the future.
 
@@ -358,12 +422,15 @@ The website also has ways to analyse how well you play depending on the units yo
      style="float: left; margin-right: 5px;" 
      width="500px;" />
 
+__Figure 20: metatft.com list of best compositions__
+
 <img src="images/metatft_comp_details.png"
      alt="lolchess match history"
      style="float: left; margin-right: 5px;" 
      width="500px;" />
 
-[comment about metatft]
+__Figure 21: metatft.com details of the Hunter Adept Composition__
+
 My favourite analytics website, [metatft.com](metatft.com), gives you information about the current metagame trends by performing a clustering algorithm on over one million games. This includes all the units in the compositions, ideal chosen traits to have in these compositions, and the best items to equip onto these units. You can view item trends (best items for units, and vice versa), composition pick and win rates, and average placements.
 
 Also, there are ways to analyse individual players to see how they pilot certain compositions, which you can use to improve your own gameplay. To me, this is the benchmark analytics resource for TFT, and probably my most frequented website at the moment. 
